@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +20,19 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function() {
+
     Route::group(['middleware' => 'admin.guest'], function() {
-        Route::get('/login', [AdminLoginController::class,'index'])->name('admin.login.store');
-        Route::post('/authenticate', [AdminLoginController::class,'authenticate'])->name('admin.authenticate');
+
+        Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
+        Route::post('/authenticate', [AdminLoginController::class, 'authenticate'])->name('admin.authenticate');
+
     });
+
     Route::group(['middleware' => 'admin.auth'], function() {
-        Route::get('/dashboard', [AdminLoginController::class, 'dashboard'])->name('admin.dashboard');
-        Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+        Route::get('/logout', [HomeController::class, 'logout'])->name('admin.logout');
+
     });
+
 });
