@@ -64,3 +64,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+  Key ................... base64:YCL+W7ke60pyIHFvtjCX3biiWCLlArLYx5y0emL+PQs=  
+  Cipher ........................................................ AES-256-CBC  
+  Encrypted file ................. C:\xampp\htdocs\OnlineStore\.env.encrypted  
