@@ -61,10 +61,10 @@
                                 <button type="submit" class="btn btn-primary w-100 py-2">Connexion</button>
 
                                 <hr class="my-4">
-                                <button type="button" class="btn btn-danger w-100 py-2 mb-3">Continuez avec
-                                    Google</button>
-                                <button type="button" class="btn btn-secondary w-100 py-2">Continuez avec
-                                    Facebook</button>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btn-danger w-100 py-2 me-2"> Google</button>
+                                    <button type="button" class="btn btn-secondary w-100 py-2"> Facebook</button>
+                                </div>
                             </form>
                         </div>
                     </div>
