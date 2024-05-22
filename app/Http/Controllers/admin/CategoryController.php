@@ -12,7 +12,7 @@ class CategoryController extends Controller
     }
 
     public function create() {
-        echo "Creating";
+        return view("admin.category.create");
     }
 
     public function store() {}
@@ -24,6 +24,6 @@ class CategoryController extends Controller
     public function update() {}
 
 
-    public function destroy($id) {}
+    public function destroy() {}
 
 }
