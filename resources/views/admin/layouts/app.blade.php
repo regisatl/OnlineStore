@@ -4,6 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
     <!-- plugins:css -->
@@ -29,6 +30,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <meta name="crsf-token" content="{{ csrf_token() }}">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -59,6 +61,14 @@
     <!-- Custom js for this page-->
     <script src="{{ asset('admin_assets/js/jquery.cookie.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin_assets/js/dashboard.js')}}"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    @yield('customJS')
     <!-- <script src="admin_assets/js/Chart.roundedBarCharts.js"></script> -->
     <!-- End custom js for this page-->
 </body>

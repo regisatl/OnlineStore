@@ -16,7 +16,7 @@
             <li class="nav-item fw-semibold d-none d-lg-block ms-0">
                 <h1 class="welcome-text">Bienvenue, <span class="text-black fw-bold">
                         {{ Auth::guard('admin')->user()->name }} </span></h1>
-                <h3 class="welcome-sub-text">Voici le résumé de votre performance sur la boutique cette semaine </h3>
+                <h3 class="welcome-sub-text">Votre tableau de bord</h3>
             </li>
         </ul>
         <ul class="navbar-nav ms-auto">
