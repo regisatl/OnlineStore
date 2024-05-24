@@ -12,23 +12,37 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('admin_assets/images/favicon.png') }}" />
+    <link rel="stylesheet" href="{{ asset('admin_assets/vendors/font-awesome/css/font-awesome.min.css') }}" />
     <style>
         body {
             font-family: 'Poppins', sans-serif;
         }
+
+        .backgroundLogin {
+            background-image: url('{{ asset('admin_assets/images/login/online2.jpg') }}') !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .back{
+            background-color: #ffffff25;
+            border-radius: 1.2rem;
+        }
     </style>
 </head>
 
-<body>
+<body class="backgroundLogin">
 
     <section class="vh-100">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card shadow-lg" style="border-radius: 1.2rem;">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5 text-white">
+                    <div class="back shadow-lg" style="border-radius: 1.2rem;">
                         <div class="card-body p-5">
                             @include('admin.message')
-                            <h3 class="mb-5 text-center text-uppercase fs-3 fw-bold text-primary"> Login - onlineStore</h3>
+                            <h3 class="mb-5 text-center text-uppercase fs-3 fw-bold"> onlineStore
+                            </h3>
                             <form action="{{ route('admin.authenticate') }}" method="POST">
                                 @csrf
                                 <div class="form-floating mb-3 mt-3">
@@ -61,9 +75,9 @@
                                 <button type="submit" class="btn btn-primary w-100 py-2">Connexion</button>
 
                                 <hr class="my-4">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-danger w-100 py-2 me-2"> Google</button>
-                                    <button type="button" class="btn btn-secondary w-100 py-2"> Facebook</button>
+                                <div class="text-center">
+                                    <a href="#"  class="text-danger px-2 me-2"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                                    <a href="#" class="text-primar px-2"><i class="fa fa-facebook-square fa-2x"></i></a>
                                 </div>
                             </form>
                         </div>
