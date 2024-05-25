@@ -12,7 +12,7 @@
         <div class="container mx-auto mt-5">
             <div class="d-flex justify-content-between align-items-center card-title">
                 <span class="text-uppercase fw-semibold">Créer une catégorie</span>
-                <a href="{{ route('categories.index') }}" class="btn btn-light"><span>Retour</span></a>
+                <a href="" class="btn btn-light"><span>Retour</span></a>
             </div>
             <div class="col-8 grid-margin stretch-card">
                 <div class="card">
@@ -28,7 +28,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
-                                <input type="text" class="form-control" name="slug" id="slug" placeholder="slug" readonly>
+                                <input type="text" class="form-control" name="slug" id="slug" placeholder="slug" >
                                 <p></p>
                             </div>
                             <div class="form-group">

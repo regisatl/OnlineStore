@@ -7,7 +7,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/admin/categories">
+            <a class="nav-link" href="">
                 <i class="mdi mdi-book-variant menu-icon"></i>
                 <span class="menu-title">Catégorie</span>
             </a>
