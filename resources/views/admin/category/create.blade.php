@@ -17,7 +17,7 @@
             <div class="col-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" action="{{ route('categories.store') }}" method="post" id="categoryForm"
+                        <form class="forms-sample" method="post" id="categoryForm"
                             name="categoryForm">
                             @csrf
                             <div class="form-group">
@@ -32,7 +32,7 @@
                                 <p></p>
                             </div>
                             <div class="form-group">
-                                <label for="status">Gender</label>
+                                <label for="status">Status</label>
                                 <select class="form-select" name="status" id="status">
                                     <option value="1">Actif</option>
                                     <option value="0">Inactif</option>

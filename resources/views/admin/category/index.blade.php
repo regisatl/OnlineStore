@@ -34,50 +34,50 @@
                             <td>Jacob</td>
                             <td>Photoshop</td>
                             <td class="text-danger"> 28.76% <i class="ti-arrow-down"></i></td>
-                            <td><label class="text-danger"><i class="fa fa-times-circle-o fa-2x"></i></label></td>
-                            <td>
-                                <a href="#" class="text-primary"><i class="fa  fa-pencil fa-2x"></i></a>
-                                <a href="#" class="text-danger"><i class="fa fa-trash-o fa-2x"></i></a>
+                            <td title="Status"><label class="text-danger"><i class="fa fa-times-circle-o fa-2x"></i></label></td>
+                            <td class="d-flex align-items-center justify-content-around">
+                                <a href="#" class="text-primary" title="Modifier"><i class="fa  fa-pencil fa-2x"></i></a>
+                                <a href="#" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></a>
                             </td>
                           </tr>
                           <tr>
                             <td>Messsy</td>
                             <td>Flash</td>
                             <td class="text-danger"> 21.06% <i class="ti-arrow-down"></i></td>
-                            <td><label class="badge badge-warning">In progress</label></td>
-                            <td>
-                                <a href="#" class="text-primary"><i class="fa  fa-pencil fa-2x"></i></a>
-                                <a href="#" class="text-danger"><i class="fa fa-trash-o fa-2x"></i></a>
+                            <td title="Status"><label class="badge badge-warning">In progress</label></td>
+                            <td class="d-flex align-items-center justify-content-around">
+                                <a href="#" class="text-primary" title="Modifier"><i class="fa  fa-pencil fa-2x"></i></a>
+                                <a href="#" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></a>
                             </td>
                           </tr>
                           <tr>
                             <td>John</td>
                             <td>Premier</td>
                             <td class="text-danger"> 35.00% <i class="ti-arrow-down"></i></td>
-                            <td><label class="badge badge-info">Fixed</label></td>
-                            <td>
-                                <a href="#" class="text-primary"><i class="fa  fa-pencil fa-2x"></i></a>
-                                <a href="#" class="text-danger"><i class="fa fa-trash-o fa-2x"></i></a>
+                            <td title="Status"><label class="badge badge-info">Fixed</label></td>
+                            <td class="d-flex align-items-center justify-content-around">
+                                <a href="#" class="text-primary" title="Modifier"><i class="fa  fa-pencil fa-2x"></i></a>
+                                <a href="#" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></a>
                             </td>
                           </tr>
                           <tr>
                             <td>Peter</td>
                             <td>After effects</td>
                             <td class="text-success"> 82.00% <i class="ti-arrow-up"></i></td>
-                            <td><label class="text-success"><i class="fa  fa-check-circle fa-2x"></i></label></td>
-                            <td>
-                                <a href="#" class="text-primary"><i class="fa  fa-pencil fa-2x"></i></a>
-                                <a href="#" class="text-danger"><i class="fa fa-trash-o fa-2x"></i></a>
+                            <td title="Status"><label class="text-success"><i class="fa  fa-check-circle fa-2x"></i></label></td>
+                            <td class="d-flex align-items-center justify-content-around">
+                                <a href="#" class="text-primary" title="Modifier"><i class="fa  fa-pencil fa-2x"></i></a>
+                                <a href="#" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></a>
                             </td>
                           </tr>
                           <tr>
                             <td>Dave</td>
                             <td>53275535</td>
                             <td class="text-success"> 98.05% <i class="ti-arrow-up"></i></td>
-                            <td><label class="badge badge-warning">In progress</label></td>
-                            <td>
-                                <a href="#" class="text-primary"><i class="fa  fa-pencil fa-2x"></i></a>
-                                <a href="#" class="text-danger"><i class="fa fa-trash-o fa-2x"></i></a>
+                            <td title="Status"><label class="badge badge-warning">In progress</label></td>
+                            <td class="d-flex align-items-center justify-content-around">
+                                <a href="#" class="text-primary" title="Modifier"><i class="fa  fa-pencil fa-2x"></i></a>
+                                <a href="#" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></a>
                             </td>
                           </tr>
                         </tbody>
