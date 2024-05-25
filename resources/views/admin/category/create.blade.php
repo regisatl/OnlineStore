@@ -17,27 +17,27 @@
             <div class="col-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample material-form" method="POST" id="categoryForm" name="categoryForm">
+                        <form class="forms-sample material-form" action="{{ route('categories.store') }}" method="POST"  id="categoryForm" name="categoryForm">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="name" required="required" />
+                                <input type="text" name="name" id="name" required="required" />
                                 <label for="input" class="control-label text-primary focus">Nom</label><i
                                     class="bar"></i>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="slug" required="required" />
+                                <input type="text" name="slug" id="slug" required="required" />
                                 <label for="input" class="control-label text-primary focus">Slug</label><i
                                     class="bar"></i>
                             </div>
                             <div class="form-group">
-                                <select name="status" class="py-1" required="required">
+                                <select name="status" id="status" class="py-1" required="required">
                                     <option value="1">Actif</option>
                                     <option value="0">Inactif</option>
                                 </select>
                                 <label class="control-label text-primary" for="select">Status</label>
                             </div>
 
-                            <div class="button-container">
+                            <div class="button-container d-flex align-items-center justify-content-between">
                                 <button type="submit" class="btn btn-primary"><span>Créer</span></button>
                                 <a href="#" class="btn btn-light"><span>Annuler</span></a>
                             </div>
@@ -58,7 +58,7 @@
             event.preventDefault();
             var element = $(this);
             $.ajax({
-                url: "{{ route('categories.store') }}",
+                url: '{{ route('categories.store') }}',
                 type: "POST",
                 data: element.serializeArray(),
                 dataType: 'json',

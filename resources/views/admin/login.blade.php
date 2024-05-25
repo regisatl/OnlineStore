@@ -69,15 +69,15 @@
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">Souvenir de moi</label>
                                     </div>
-                                    <a href="#!" class="text-body">Mot de passe oublié ?</a>
+                                    <a href="#!" class="text-white">Mot de passe oublié ?</a>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary w-100 py-2">Connexion</button>
 
                                 <hr class="my-4">
-                                <div class="text-center">
-                                    <a href="#"  class="text-danger px-2 me-2"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                                    <a href="#" class="text-primar px-2"><i class="fa fa-facebook-square fa-2x"></i></a>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="#"  class="d-flex align-items-center justify-content-center btn btn-danger px-2 w-100 me-3"><span class="me-2"><i class="fa fa-google-plus-square fa-2x"></span></i>Google</a>
+                                    <a href="#" class="d-flex align-items-center justify-content-center btn btn-primary px-2 w-100"><span class="me-2"><i class="fa fa-facebook-square fa-2x"></span></i>Facebook</a>
                                 </div>
                             </form>
                         </div>

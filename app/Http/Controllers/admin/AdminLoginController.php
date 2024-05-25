@@ -31,11 +31,11 @@ class AdminLoginController extends Controller
                     return redirect()->route('admin.dashboard');
                 } else {
                     Auth::guard('admin')->logout();
-                    return redirect()->route('admin.login')->with('error', "Connexion non autorisée sur cette page");
+                    return redirect()->route('admin.login')->with('error', "Connexion non autorisée à cette page");
                 }
 
             } else {
-                return redirect()->route('admin.login')->with(['error' => 'Email ou mot de passe incorrect'])->withInput($request->only('email'));
+                return redirect()->route('admin.login')->with(['error' => 'Email ou Mot de passe incorrect'])->withInput($request->only('email'));
             }
 
         } else {
