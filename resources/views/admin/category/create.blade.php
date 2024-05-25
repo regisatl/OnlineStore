@@ -12,33 +12,35 @@
         <div class="container mx-auto mt-5">
             <div class="d-flex justify-content-between align-items-center card-title">
                 <span class="text-uppercase fw-semibold">Créer une catégorie</span>
-                <a href="#" class="btn btn-light"><span>Retour</span></a>
+                <a href="{{ route('categories.index') }}" class="btn btn-light"><span>Retour</span></a>
             </div>
             <div class="col-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample material-form" action="{{ route('categories.store') }}" method="POST"  id="categoryForm" name="categoryForm">
+                        <form class="forms-sample" action="{{ route('categories.store') }}" method="post" id="categoryForm"
+                            name="categoryForm">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="name" id="name" required="required" />
-                                <label for="input" class="control-label text-primary focus">Nom</label><i
-                                    class="bar"></i>
+                                <label for="name">Nom</label>
+                                <input type="text" class="form-control" name="name" id="name"
+                                    placeholder="nom">
+                                    <p></p>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="slug" id="slug" required="required" />
-                                <label for="input" class="control-label text-primary focus">Slug</label><i
-                                    class="bar"></i>
+                                <label for="slug">Slug</label>
+                                <input type="text" class="form-control" name="slug" id="slug" placeholder="slug" readonly>
+                                <p></p>
                             </div>
                             <div class="form-group">
-                                <select name="status" id="status" class="py-1" required="required">
+                                <label for="status">Gender</label>
+                                <select class="form-select" name="status" id="status">
                                     <option value="1">Actif</option>
                                     <option value="0">Inactif</option>
                                 </select>
-                                <label class="control-label text-primary" for="select">Status</label>
+                                <p></p>
                             </div>
-
                             <div class="button-container d-flex align-items-center justify-content-between">
-                                <button type="submit" class="btn btn-primary"><span>Créer</span></button>
+                                <button type="submit" class="btn btn-primary"><span>Ajouter</span></button>
                                 <a href="#" class="btn btn-light"><span>Annuler</span></a>
                             </div>
                         </form>
@@ -59,7 +61,7 @@
             var element = $(this);
             $.ajax({
                 url: '{{ route('categories.store') }}',
-                type: "POST",
+                type: "post",
                 data: element.serializeArray(),
                 dataType: 'json',
                 success: function(response) {
@@ -72,7 +74,6 @@
                                 'invalid-feedback')
                             .html('');
                     } else {
-
                         var errors = response.['errors'];
                         if (errors['name']) {
                             $('#name').addClass('is-invalid');.siblings('p').addClass(
@@ -94,12 +95,28 @@
                                 .html('');
                         }
                     },
-                    error: function(jqXHR, exception) {
-                        console.log("Erreur quelque chose s'est mal passée");
-                    }
                 }
-
+                error: function(jqXHR, exception) {
+                    console.log("Erreur quelque chose s'est mal passée");
+                }
             })
         });
+
+        $('#name').change(function() {
+            element = $(this);
+            $.ajax({
+                url: '{{ route('getslug') }}',
+                type: "get",
+                data: {
+                    title: element.val()
+                },
+                dataType: 'json',
+                success: function(response) {
+                    if (response['status'] == true) {
+                        $('#slug').val(response['slug']);
+                    }
+                }
+            });
+        })
     </script>
 @endsection

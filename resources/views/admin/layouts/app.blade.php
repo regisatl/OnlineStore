@@ -20,6 +20,8 @@
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="{{ asset('admin_assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/js/select.dataTables.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin_assets/vendors/select2/select2.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin_assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css')}}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('admin_assets/css/style.css')}}">
