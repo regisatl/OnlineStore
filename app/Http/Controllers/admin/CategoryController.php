@@ -10,52 +10,65 @@ use Illuminate\Support\Facades\Validator;
 class CategoryController extends Controller
 {
     //
-    public function index() {
-        $categories = Category::latest()->paginate(10);
+    public function index(Request $request)
+    {
+        $categories = Category::latest();
+
+        if (!empty($request->get('keyword'))) {
+            $categories = $categories->where('name', 'like', '%' . $request->get('keyword') . '%');
+        }
+
+        $categories = $categories->paginate(10);
 
         return view("admin.category.index", compact("categories"));
     }
 
-    public function create() {
+    public function create()
+    {
         return view("admin.category.create");
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'slug' => 'required|unique:categories',
         ]);
 
-        if( $validator->passes() ) {
+        if ($validator->passes()) {
             $category = new Category();
             $category->name = $request->name;
             $category->slug = $request->slug;
             $category->status = $request->status;
             $category->save();
 
-            $request->session()->flash('success','Catégorie ajouté avec succès');
+            $request->session()->flash('success', 'Catégorie ajoutée avec succès');
 
-            return response()->json([
-                'status' => true,
-                'message' => 'Catégorie créer avec succès'
-            ]);
+            return redirect()->route('categories.index')->with('success', "Catégorie ajoutée avec succès");
 
-        }else {
-            return response()->json([
-                'status' => true,
-                'errors' => $validator->errors()
-            ]);
+        } else {
+            return redirect()->route('categories.index')->with('error', "Erreur lors de l'ajout de la catégorie");
         }
 
     }
 
-    public function show() {}
+    public function show()
+    {
+    }
 
-    public function edit() {}
+    public function edit()
+    {
+        return "Edit catégorie";
+    }
 
-    public function update() {}
+    public function update()
+    {
+    }
 
 
-    public function destroy() {}
+    public function destroy()
+    {
+        return "Supprimer catégorie";
+    }
 
 }

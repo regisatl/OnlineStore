@@ -22,13 +22,14 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name">Nom</label>
-                                <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="nom">
-                                    <p></p>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="nom"
+                                    >
+                                <p></p>
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
-                                <input type="text" readonly class="form-control" name="slug" id="slug" placeholder="slug" >
+                                <input type="text" class="form-control" name="slug" id="slug" placeholder="slug"
+                                    required>
                                 <p></p>
                             </div>
                             <div class="form-group">
@@ -59,14 +60,18 @@
         $('#categoryForm').submit(function(event) {
             event.preventDefault();
             var element = $(this);
+            $("button[type=submit]").prop('disabled', true);
             $.ajax({
                 url: '{{ route('categories.store') }}',
                 type: "post",
                 data: element.serializeArray(),
                 dataType: 'json',
                 success: function(response) {
-
+                    $("button[type=submit]").prop('disabled', false);
                     if (response['status'] == true) {
+
+                        window.location.href = "{{ route('categories.index') }}";
+
                         $('#name').removeClass('is-invalid');.siblings('p').removeClass(
                                 'invalid-feedback')
                             .html('');
@@ -104,6 +109,7 @@
 
         $('#name').change(function() {
             element = $(this);
+            $("button[type=submit]").prop('disabled', true);
             $.ajax({
                 url: '{{ route('getslug') }}',
                 type: "get",
@@ -112,6 +118,7 @@
                 },
                 dataType: 'json',
                 success: function(response) {
+                    $("button[type=submit]").prop('disabled', false);
                     if (response['status'] == true) {
                         $('#slug').val(response['slug']);
                     }

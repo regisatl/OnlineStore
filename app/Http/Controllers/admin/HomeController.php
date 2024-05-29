@@ -19,6 +19,6 @@ class HomeController extends Controller
     public function logout()
     {
         Auth::guard('admin')->logout();
-        return redirect()->route('admin.login')->with('success', 'Déconnexion réussie');
+        return redirect()->route('admin.login')->with('success', 'Vous êtes déconnecté');
     }
 }

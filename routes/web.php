@@ -42,11 +42,11 @@ Route::group(['prefix' => 'admin'], function() {
 
         Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');
 
-        Route::post('/categories/edit', [CategoryController::class, 'edit'])->name('categories.edit');
-        
+        Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit');
+
         Route::put('/categories/update/{id}', [CategoryController::class, 'update'])->name('categories.update');
 
-        Route::post('/categories/destroy/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+        Route::get('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
 
         Route::get('/getslug',  function(Request $request){
