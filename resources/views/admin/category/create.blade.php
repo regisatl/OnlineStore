@@ -12,12 +12,12 @@
         <div class="container mx-auto mt-5">
             <div class="d-flex justify-content-between align-items-center card-title">
                 <span class="text-uppercase fw-semibold">Créer une catégorie</span>
-                <a href="" class="btn btn-light"><span>Retour</span></a>
+                <a href="{{ route('categories.index') }}" class="btn btn-light"><span>Retour</span></a>
             </div>
-            <div class="col-8 grid-margin stretch-card">
+            <div class="col-12 grid-margin stretch-card mt-3">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" method="post" id="categoryForm"
+                        <form class="forms-sample" method="post" action="{{ route('categories.store') }}" id="categoryForm"
                             name="categoryForm">
                             @csrf
                             <div class="form-group">
@@ -28,20 +28,20 @@
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
-                                <input type="text" class="form-control" name="slug" id="slug" placeholder="slug" >
+                                <input type="text" readonly class="form-control" name="slug" id="slug" placeholder="slug" >
                                 <p></p>
                             </div>
                             <div class="form-group">
                                 <label for="status">Status</label>
-                                <select class="form-select" name="status" id="status">
-                                    <option value="1">Actif</option>
-                                    <option value="0">Inactif</option>
+                                <select class="form-select text-black" name="status" id="status">
+                                    <option value="1" class="text-black">Actif</option>
+                                    <option value="0" class="text-black">Inactif</option>
                                 </select>
                                 <p></p>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
                                 <button type="submit" class="btn btn-primary"><span>Ajouter</span></button>
-                                <a href="#" class="btn btn-light"><span>Annuler</span></a>
+                                <button type="reset" class="btn btn-light"><span>Annuler</span></button>
                             </div>
                         </form>
                     </div>
