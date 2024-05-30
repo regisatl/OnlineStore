@@ -11,7 +11,7 @@
 
         <div class="container mx-auto mt-5">
             <div class="d-flex justify-content-between align-items-center card-title">
-                <span class="text-uppercase fw-semibold">Créer une catégorie</span>
+                <span class="text-uppercase fw-semibold">Ajouter une catégorie</span>
                 <a href="{{ route('categories.index') }}" class="btn btn-light"><span>Retour</span></a>
             </div>
             <div class="col-12 grid-margin stretch-card mt-3">
@@ -22,14 +22,13 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name">Nom</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="nom"
-                                    >
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Nom">
                                 <p></p>
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
-                                <input type="text" class="form-control" name="slug" id="slug" placeholder="slug"
-                                    required>
+                                <input type="text" readonly class="form-control" name="slug" id="slug"
+                                    placeholder="Slug" required>
                                 <p></p>
                             </div>
                             <div class="form-group">
@@ -57,73 +56,61 @@
 
 @section('customJS')
     <script>
-        $('#categoryForm').submit(function(event) {
-            event.preventDefault();
-            var element = $(this);
-            $("button[type=submit]").prop('disabled', true);
-            $.ajax({
-                url: '{{ route('categories.store') }}',
-                type: "post",
-                data: element.serializeArray(),
-                dataType: 'json',
-                success: function(response) {
-                    $("button[type=submit]").prop('disabled', false);
-                    if (response['status'] == true) {
-
-                        window.location.href = "{{ route('categories.index') }}";
-
-                        $('#name').removeClass('is-invalid');.siblings('p').removeClass(
-                                'invalid-feedback')
-                            .html('');
-                        $('#slug').removeClass('is-invalid');.siblings('p').removeClass(
-                                'invalid-feedback')
-                            .html('');
-                    } else {
-                        var errors = response.['errors'];
-                        if (errors['name']) {
-                            $('#name').addClass('is-invalid');.siblings('p').addClass(
-                                    'invalid-feedback')
-                                .html(errors['name']);
+        $(document).ready(function() {
+            $('#categoryForm').submit(function(event) {
+                event.preventDefault();
+                var element = $(this);
+                $("button[type=submit]").prop('disabled', true);
+                $.ajax({
+                    url: '{{ route('categories.store') }}',
+                    type: "post",
+                    data: element.serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        $("button[type=submit]").prop('disabled', false);
+                        if (response.status) {
+                            window.location.href = "{{ route('categories.index') }}";
                         } else {
-                            $('#name').removeClass('is-invalid');.siblings('p').removeClass(
-                                    'invalid-feedback')
-                                .html('');
-                        }
-
-                        if (errors['slug']) {
-                            $('#slug').addClass('is-invalid');.siblings('p').addClass(
-                                    'invalid-feedback')
-                                .html(errors['name']);
-                        } else {
-                            $('#slug').removeClass('is-invalid');.siblings('p').removeClass(
-                                    'invalid-feedback')
-                                .html('');
+                            var errors = response.errors;
+                            handleFormErrors(errors);
                         }
                     },
-                }
-                error: function(jqXHR, exception) {
-                    console.log("Erreur quelque chose s'est mal passée");
-                }
-            })
-        });
-
-        $('#name').change(function() {
-            element = $(this);
-            $("button[type=submit]").prop('disabled', true);
-            $.ajax({
-                url: '{{ route('getslug') }}',
-                type: "get",
-                data: {
-                    title: element.val()
-                },
-                dataType: 'json',
-                success: function(response) {
-                    $("button[type=submit]").prop('disabled', false);
-                    if (response['status'] == true) {
-                        $('#slug').val(response['slug']);
+                    error: function() {
+                        console.log("Erreur, quelque chose s'est mal passé");
                     }
-                }
+                });
             });
-        })
+
+            $('#name').change(function() {
+                var element = $(this);
+                $("button[type=submit]").prop('disabled', true);
+                $.ajax({
+                    url: '{{ route('getslug') }}',
+                    type: "get",
+                    data: { title: element.val() },
+                    dataType: 'json',
+                    success: function(response) {
+                        $("button[type=submit]").prop('disabled', false);
+                        if (response.status) {
+                            $('#slug').val(response.slug);
+                        }
+                    }
+                });
+            });
+
+            function handleFormErrors(errors) {
+                if (errors.name) {
+                    $('#name').addClass('is-invalid').siblings('p').addClass('invalid-feedback').html(errors.name);
+                } else {
+                    $('#name').removeClass('is-invalid').siblings('p').removeClass('invalid-feedback').html('');
+                }
+
+                if (errors.slug) {
+                    $('#slug').addClass('is-invalid').siblings('p').addClass('invalid-feedback').html(errors.slug);
+                } else {
+                    $('#slug').removeClass('is-invalid').siblings('p').removeClass('invalid-feedback').html('');
+                }
+            }
+        });
     </script>
 @endsection
