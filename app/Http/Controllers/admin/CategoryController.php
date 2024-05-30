@@ -30,27 +30,39 @@ class CategoryController extends Controller
 
       public function store(Request $request)
       {
-            $validator = Validator::make($request->all(), [
-                  'name' => 'required',
-                  'slug' => 'required|unique:categories',
+            // dd($request->all(), $request->hasFile('image'));
+
+            // Validation des données
+            $request->validate([
+                  'name' => 'required|string|max:255',
+                  'slug' => 'required|string|max:255|unique:categories',
+                  'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                  'status' => 'required|boolean',
             ]);
 
-            if ($validator->passes()) {
-                  $category = new Category();
-                  $category->name = $request->name;
-                  $category->slug = $request->slug;
-                  $category->status = $request->status;
-                  $category->save();
-
-                  $request->session()->flash('success', 'Catégorie ajoutée avec succès');
-
-                  return redirect()->route('categories.index')->with('success', "Catégorie ajoutée avec succès");
-
+            // Gestion du téléchargement de l'image
+            if ($request->hasFile('image')) {
+                  $imageName = time() . '.' . $request->image->extension();
+                  $request->image->move(public_path('images'), $imageName);
             } else {
-                  return redirect()->route('categories.index')->with('error', "Erreur lors de l'ajout de la catégorie");
+                  $imageName = null;
             }
 
+            // Création de la catégorie
+            $category = new Category();
+            $category->name = $request->input('name');
+            $category->slug = $request->input('slug');
+            $category->image = $imageName;
+            $category->status = $request->input('status');
+
+            // Sauvegarder la catégorie dans la base de données
+            $category->save();
+
+            $request->session()->flash('success', 'Catégorie ajoutée avec succès');
+
+            return redirect()->route('categories.index')->with('success', "Catégorie ajoutée avec succès");
       }
+
 
       public function show()
       {

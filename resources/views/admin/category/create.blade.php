@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="forms-sample" method="post" action="{{ route('categories.store') }}" id="categoryForm"
-                            name="categoryForm">
+                            name="categoryForm" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Nom</label>
@@ -27,9 +27,20 @@
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
-                                <input type="text" readonly class="form-control" name="slug" id="slug"
+                                <input type="text" class="form-control" name="slug" id="slug"
                                     placeholder="Slug" required>
                                 <p></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Choisir une image</label>
+                                <input type="file" name="image" class="form-control">
+                                {{-- <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled
+                                        placeholder="Image">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-primary" type="button">Choisir</button>
+                                    </span>
+                                </div> --}}
                             </div>
                             <div class="form-group">
                                 <label for="status">Status</label>
@@ -87,7 +98,9 @@
                 $.ajax({
                     url: '{{ route('getslug') }}',
                     type: "get",
-                    data: { title: element.val() },
+                    data: {
+                        title: element.val()
+                    },
                     dataType: 'json',
                     success: function(response) {
                         $("button[type=submit]").prop('disabled', false);
@@ -111,6 +124,7 @@
                     $('#slug').removeClass('is-invalid').siblings('p').removeClass('invalid-feedback').html('');
                 }
             }
+
         });
     </script>
 @endsection
