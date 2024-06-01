@@ -3,7 +3,6 @@
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\admin\ImageControler;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -49,18 +48,6 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::get('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
-            Route::post('/uploadImage', [ImageControler::class, 'upload'])->name('categories.upload');
-
-            Route::get('/getslug', function (Request $request) {
-                  $slug = '';
-                  if (!empty(($request->title))) {
-                        $slug = Str::slug($request->title);
-                  }
-                  return response()->json([
-                        'status' => true,
-                        'slug' => $slug
-                  ]);
-            })->name('getslug');
       });
 
 });
