@@ -31,7 +31,6 @@ class CategoryController extends Controller
       {
 
             try {
-                  //code...
                   // Validation des données
                   $request->validate([
                         'name' => 'required|string|max:255',
@@ -43,7 +42,7 @@ class CategoryController extends Controller
                   // Gestion du téléchargement de l'image
                   if ($request->hasFile('image')) {
                         $imageName = time() . '.' . $request->image->extension();
-                        $request->image->move(public_path('images'), $imageName);
+                        $request->image->move(public_path('images/categories'), $imageName);
                   } else {
                         $imageName = null;
                   }
