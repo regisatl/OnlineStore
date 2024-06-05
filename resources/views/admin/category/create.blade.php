@@ -34,7 +34,14 @@
                             </div>
                             <div class="form-group">
                                 <label>Choisir une image</label>
-                                <input type="file" name="image" id="image" class="form-control">
+                                <input type="file" name="image" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled
+                                        placeholder="Insérer votre image...">
+                                    <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-primary" type="button">Choisir</button>
+                                    </span>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="status">Status</label>
@@ -74,6 +81,5 @@
             submitBtn.disabled = true;
             submitBtn.classList.add('disabled');
         });
-
     </script>
 @endsection
