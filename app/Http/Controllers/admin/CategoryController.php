@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-      //
+
       public function index(Request $request)
       {
             $categories = Category::latest();
@@ -61,32 +61,79 @@ class CategoryController extends Controller
 
                   return redirect()->route('categories.index')->with('success', "Catégorie ajoutée avec succès");
             } catch (\Exception $e) {
-                  //throw $th;
                   \DB::rollBack();
                   return redirect()->back()->with("error", $e->getMessage());
             }
-
-
       }
-
 
       public function show()
       {
       }
 
-      public function edit()
+      public function edit(Request $request, $categoryId)
       {
-            return "Edit catégorie";
+            $category = Category::find($categoryId);
+            if (empty($category)) {
+                  return redirect()->route('categories.index')->with("error", "Catégorie non trouvée");
+            }
+            return view("admin.category.edit", compact('category'));
       }
 
-      public function update()
+      public function update(Request $request, $categoryId)
       {
+            try {
+                  // Validation des données
+                  $request->validate([
+                        'name' => 'required|string|max:255',
+                        'slug' => 'required|string|max:255|unique:categories,slug,' . $categoryId,
+                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                        'status' => 'required|boolean',
+                  ]);
+
+                  // Trouver la catégorie
+                  $category = Category::find($categoryId);
+
+                  // Gestion du téléchargement de l'image
+                  if ($request->hasFile('image')) {
+                        $imageName = time() . '.' . $request->image->extension();
+                        $request->image->move(public_path('images/categories'), $imageName);
+                  } else {
+                        $imageName = $category->image;
+                  }
+
+                  // Mise à jour de la catégorie
+                  $category->name = $request->input('name');
+                  $category->slug = $request->input('slug');
+                  $category->image = $imageName;
+                  $category->status = $request->input('status');
+
+                  // Sauvegarder la catégorie dans la base de données
+                  $category->save();
+
+                  $request->session()->flash('success', 'Catégorie mise à jour avec succès');
+
+                  return redirect()->route('categories.index')->with('success', "Catégorie mise à jour avec succès");
+            } catch (\Exception $e) {
+                  \DB::rollBack();
+                  return redirect()->back()->with("error", $e->getMessage());
+            }
       }
 
-
-      public function destroy()
+      public function destroy($categoryId)
       {
-            return "Supprimer catégorie";
+            try {
+                  // Trouver la catégorie
+                  $category = Category::find($categoryId);
+
+                  // Supprimer la catégorie
+                  $category->delete();
+
+                  // Rediriger vers l'index des catégories avec un message de succès
+                  return redirect()->route('categories.index')->with('success', 'Catégorie supprimée avec succès');
+            } catch (\Exception $e) {
+                  // Rediriger vers la page précédente avec un message d'erreur
+                  return redirect()->back()->with('error', $e->getMessage());
+            }
       }
 
 }
