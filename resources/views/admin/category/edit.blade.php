@@ -40,7 +40,7 @@
                                     <input type="text" class="form-control file-upload-info" disabled
                                         placeholder="Insérer votre image...">
                                     <span class="input-group-append">
-                                        <button class="file-upload-browse btn btn-primary" type="button">Choisir</button>
+                                        <button class="file-upload-browse btn btn-success" type="button">Choisir</button>
                                     </span>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                 <p></p>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
-                                <button type="submit" class="btn btn-primary" id="submitBtn"><span>Modifier</span></button>
+                                <button type="submit" class="btn btn-success" id="submitBtn"><span>Modifier</span></button>
                                 <button type="reset" class="btn btn-light"><span>Annuler</span></button>
                             </div>
                         </form>

@@ -64,13 +64,18 @@
                                                 </td>
                                                 <td class="d-flex align-items-center justify-content-around">
                                                     <a href= "{{ route('categories.edit', $category->id) }}"
-                                                        class="text-primary" title="Modifier"><i
-                                                            class="fa  fa-pencil fa-2x"></i></a>
-                                                      <form method="POST" action="{{ route('categories.destroy', $category->id) }}">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></button>
-                                                      </form>
+                                                        class="btn btn-primary btn-icon btn-sm btn-rounded" title="Modifier"><i
+                                                            class="fa  fa-pencil"></i></a>
+                                                    <form method="POST"
+                                                        action="{{ route('categories.destroy', $category->id) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                            class="btn btn-danger btn-icon btn-sm btn-rounded"
+                                                            title="Supprimer">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
