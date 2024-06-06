@@ -10,6 +10,6 @@ class SubCategoryController extends Controller
 
       public function create()
       {
-            return view("admin.sub_category.create");
+            return view("admin.sub-category.create");
       }
 }
