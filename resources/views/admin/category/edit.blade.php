@@ -25,13 +25,11 @@
                                 <label for="name">Nom</label>
                                 <input type="text" value="{{ $category->name }}" class="form-control" name="name"
                                     id="name" placeholder="Nom" required>
-                                <p></p>
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
                                 <input type="text" value="{{ $category->slug }}" class="form-control" name="slug"
                                     id="slug" placeholder="Slug" required readonly>
-                                <p></p>
                             </div>
                             <div class="form-group">
                                 <label>Choisir une image</label>
@@ -61,7 +59,6 @@
                                     <option {{ $category->status == 0 ? 'selected' : '' }} value="0"
                                         class="text-black">Inactif</option>
                                 </select>
-                                <p></p>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
                                 <button type="submit" class="btn btn-success" id="submitBtn"><span>Modifier</span></button>

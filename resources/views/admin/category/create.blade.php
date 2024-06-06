@@ -24,13 +24,11 @@
                                 <label for="name">Nom</label>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Nom"
                                     required>
-                                <p></p>
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
                                 <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug"
                                     required readonly>
-                                <p></p>
                             </div>
                             <div class="form-group">
                                 <label>Choisir une image</label>
@@ -49,7 +47,6 @@
                                     <option value="1" class="text-black">Actif</option>
                                     <option value="0" class="text-black">Inactif</option>
                                 </select>
-                                <p></p>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
                                 <button type="submit" class="btn btn-primary" id="submitBtn"><span>Ajouter</span></button>

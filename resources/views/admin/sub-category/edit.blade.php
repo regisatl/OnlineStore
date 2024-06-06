@@ -23,7 +23,8 @@
                             <div class="form-group">
                                 <label for="category">Catégories</label>
                                 <select class="form-select text-black" name="category_id" id="category_id">
-                                    <option value="" class="text-black" selected disabled>Choisissez une catégories....</option>
+                                    <option value="" class="text-black" selected disabled>Choisissez une
+                                        catégories....</option>
                                     @if ($categories->isNotEmpty())
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}" class="text-black">{{ $category->name }}
@@ -50,7 +51,7 @@
                                 </select>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
-                                <button type="submit" class="btn btn-primary" id="submitBtn"><span>Ajouter</span></button>
+                                <button type="submit" class="btn btn-success" id="submitBtn"><span>Ajouter</span></button>
                                 <button type="reset" class="btn btn-light"><span>Annuler</span></button>
                             </div>
                         </form>

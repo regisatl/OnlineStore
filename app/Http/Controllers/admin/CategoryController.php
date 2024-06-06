@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\admin\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -124,7 +124,7 @@ class CategoryController extends Controller
             try {
                   // Trouver la catégorie
                   $category = Category::find($categoryId);
-                  
+
                   // Supprimer la catégorie
                   $category->delete();
 

@@ -81,7 +81,7 @@
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="5">Aucune catégorie trouvé pour le moment...</td>
+                                            <td colspan="5">Aucune catégorie trouvée pour le moment...</td>
                                         </tr>
                                     @endif
                                 </tbody>
