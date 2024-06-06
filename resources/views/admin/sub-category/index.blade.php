@@ -90,7 +90,7 @@
                             </table>
                         </div>
                         <div class="text-primary">
-                            <p class="mt-3 text-primary">{{ $subcategories->links() }}</p>
+                            <p class="mt-3 text-primary">{{ $subCategories->links() }}</p>
                         </div>
                     </div>
                 </div>

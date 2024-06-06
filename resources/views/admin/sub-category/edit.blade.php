@@ -17,17 +17,18 @@
             <div class="col-12 grid-margin stretch-card mt-3">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" method="post" action="{{ route('subcategories.store') }}"
+                        <form class="forms-sample" method="post" action="{{ route('subcategories.update', $subCategory->id) }}"
                             id="subcategoryForm" name="subcategoryForm" enctype="multipart/form-data">
                             @csrf
+                            @method('put')
                             <div class="form-group">
                                 <label for="category">Catégories</label>
                                 <select class="form-select text-black" name="category_id" id="category_id">
                                     <option value="" class="text-black" selected disabled>Choisissez une
                                         catégories....</option>
-                                    @if ($categories->isNotEmpty())
+                                    @if ($subCategory->isNotEmpty())
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}" class="text-black">{{ $category->name }}
+                                            <option value="{{ $subCategory->id }}" class="text-black">{{ $subCategory->name }}
                                             </option>
                                         @endforeach
                                     @endif
@@ -35,19 +36,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Nom</label>
-                                <input type="text" class="form-control" name="name" id="name"
+                                <input type="text" value="{{ $subCategory->name }}" class="form-control" name="name" id="name"
                                     placeholder="sous catégories" required>
                             </div>
                             <div class="form-group">
                                 <label for="slug">Slug</label>
-                                <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug"
+                                <input type="text" value="{{ $subCategory->slug }}" class="form-control" name="slug" id="slug" placeholder="Slug"
                                     required readonly>
                             </div>
                             <div class="form-group">
                                 <label for="status">Status</label>
                                 <select class="form-select text-black" name="status" id="status">
-                                    <option value="1" class="text-black">Actif</option>
-                                    <option value="0" class="text-black">Inactif</option>
+                                    <option {{ $subCategory->status == 1 ? 'selected' : '' }} value="1" class="text-black">Actif</option>
+                                    <option {{ $subCategory->status == 0 ? 'selected' : '' }} value="0" class="text-black">Inactif</option>
                                 </select>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">

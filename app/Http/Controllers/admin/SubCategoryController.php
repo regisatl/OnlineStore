@@ -12,7 +12,7 @@ class SubCategoryController extends Controller
 
       public function index(Request $request)
       {
-            $subCategories = SubCategory::select('sub_categories.*', 'categories.name as categoryName')->latest('id')->leftJoin('categories', 'categories_id', 'subcategory.category_id');
+            $subCategories = SubCategory::with('category')->latest('id');
 
             if (!empty($request->get('keyword'))) {
                   $subCategories = $subCategories->where('name', 'like', '%' . $request->get('keyword') . '%');
@@ -59,14 +59,13 @@ class SubCategoryController extends Controller
             }
       }
 
-
-      public function edit(Request $request, $subcategoryId)
+      public function edit(Request $request, $subCategoryId)
       {
-            $subcategory = SubCategory::find($subcategoryId);
-            if (empty($subcategory)) {
-                  return redirect()->route('subcategories.index')->with("error", "Catégorie non trouvée");
+            $subCategory = SubCategory::find($subCategoryId);
+            if (empty($subCategory)) {
+                  return redirect()->route('subcategories.index')->with("error", "Sous catégorie non trouvée");
             }
-            return view("admin.sub-categories.edit", compact('subcategory'));
+            return view("admin.sub-category.edit", compact('subCategory'));
       }
 
       public function update(Request $request, $subCategoryId)
@@ -101,11 +100,11 @@ class SubCategoryController extends Controller
             }
       }
 
-      public function destroy($subcategoryId)
+      public function destroy($subCategoryId)
       {
             try {
                   // Trouver la catégorie
-                  $subCategory = SubCategory::find($subcategoryId);
+                  $subCategory = SubCategory::find($subCategoryId);
 
                   // Supprimer la catégorie
                   $subCategory->delete();
