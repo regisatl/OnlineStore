@@ -66,9 +66,11 @@
                                                     <a href= "{{ route('categories.edit', $category->id) }}"
                                                         class="text-primary" title="Modifier"><i
                                                             class="fa  fa-pencil fa-2x"></i></a>
-                                                    <a href="{{ route('categories.destroy', $category->id) }}"
-                                                        class="text-danger" title="Supprimer"><i
-                                                            class="fa fa-trash-o fa-2x"></i></a>
+                                                      <form method="POST" action="{{ route('categories.destroy', $category->id) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="text-danger" title="Supprimer"><i class="fa fa-trash-o fa-2x"></i></button>
+                                                      </form>
                                                 </td>
                                             </tr>
                                         @endforeach

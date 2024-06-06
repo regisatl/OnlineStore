@@ -20,6 +20,7 @@
                         <form class="forms-sample" method="post" action="{{ route('categories.update', $category->id) }}" id="categoryForm"
                             name="categoryForm" enctype="multipart/form-data">
                             @csrf
+                            @method('put')
                             <div class="form-group">
                                 <label for="name">Nom</label>
                                 <input type="text" value="{{ $category->name }}" class="form-control" name="name"

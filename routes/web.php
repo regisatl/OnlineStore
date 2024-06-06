@@ -46,7 +46,7 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::put('/categories/update/{id}', [CategoryController::class, 'update'])->name('categories.update');
 
-            Route::get('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+            Route::delete('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
       });
 

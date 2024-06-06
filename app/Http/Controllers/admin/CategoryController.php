@@ -124,7 +124,7 @@ class CategoryController extends Controller
             try {
                   // Trouver la catégorie
                   $category = Category::find($categoryId);
-
+                  dd($category);
                   // Supprimer la catégorie
                   $category->delete();
 
