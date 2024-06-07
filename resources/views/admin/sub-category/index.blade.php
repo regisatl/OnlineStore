@@ -51,7 +51,7 @@
                                             <tr>
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $subCategory->name }}</td>
-                                                <td>{{ $subCategory->categoryName }}</td>
+                                                <td>{{ $subCategory->category->name }}</td>
                                                 <td class="text-decoration-underline fw-medium text-primary">
                                                     {{ $subCategory->slug }}</i>
                                                 </td>

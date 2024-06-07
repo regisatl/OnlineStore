@@ -65,7 +65,10 @@ class SubCategoryController extends Controller
             if (empty($subCategory)) {
                   return redirect()->route('subcategories.index')->with("error", "Sous catégorie non trouvée");
             }
-            return view("admin.sub-category.edit", compact('subCategory'));
+            $categories = Category::orderBy('name', 'asc')->get();
+            $data['categories'] = $categories;
+            $data['subCategory'] = $subCategory;
+            return view("admin.sub-category.edit", $data);
       }
 
       public function update(Request $request, $subCategoryId)
