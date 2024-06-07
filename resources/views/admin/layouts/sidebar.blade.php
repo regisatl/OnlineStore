@@ -13,7 +13,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route ('subcategories.create') }}">
+            <a class="nav-link" href="{{ route('subcategories.index') }}">
                 <i class="mdi mdi-book menu-icon"></i>
                 <span class="menu-title">Sous-Catégorie</span>
             </a>

@@ -6,7 +6,7 @@
             </button>
         </div>
         <div>
-            <a class="navbar-brand brand-logo" href="index.html">
+            <a class="navbar-brand brand-logo" href="{{ route('admin.dashboard') }}">
                 OnlineStore
             </a>
         </div>
@@ -57,7 +57,7 @@
                     </a>
                 </div>
             </li>
-            <li class="nav-item d-none d-lg-block">
+            <li class="nav-item d-none d-lg-block z-3">
                 <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
                     <span class="input-group-addon input-group-prepend border-right">
                         <span class="icon-calendar input-group-text calendar-icon"></span>
