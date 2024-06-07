@@ -17,7 +17,7 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-header px-0">
-                        <form action="" method="get" class="d-flex align-items-center justify-content-between">
+                        <form method="get" class="d-flex align-items-center justify-content-between">
                             <div class="me-5">
                                 <button type="button" class="btn btn-light"
                                     onclick="window.location.href='{{ route('subcategories.index') }}'">Réintialiser</button>
@@ -66,8 +66,8 @@
                                                 </td>
                                                 <td class="d-flex align-items-center justify-content-around">
                                                     <a href= "{{ route('subcategories.edit', $subCategory->id) }}"
-                                                        class="btn btn-primary btn-icon btn-sm btn-rounded" title="Modifier"><i
-                                                            class="fa  fa-pencil"></i></a>
+                                                        class="btn btn-primary btn-icon btn-sm btn-rounded"
+                                                        title="Modifier"><i class="fa  fa-pencil"></i></a>
                                                     <form method="POST"
                                                         action="{{ route('subcategories.destroy', $subCategory->id) }}">
                                                         @csrf
@@ -95,7 +95,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

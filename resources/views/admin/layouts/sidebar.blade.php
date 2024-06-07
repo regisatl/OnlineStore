@@ -19,7 +19,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ route('brands.index') }}">
                 <i class="mdi mdi-bookmark menu-icon"></i>
                 <span class="menu-title">Marques</span>
             </a>
