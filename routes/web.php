@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\admin\BrandController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\SubCategoryController;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +64,13 @@ Route::group(['prefix' => 'admin'], function () {
             Route::delete('/brands/delete/{id}', [BrandController::class, 'destroy'])->name('brands.destroy');
 
             // Products routes
+            Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+            Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+            Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+            Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
+            Route::put('/products/update/{id}', [ProductController::class, 'update'])->name('products.update');
+            Route::delete('/products/delete/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
       });
 
 });

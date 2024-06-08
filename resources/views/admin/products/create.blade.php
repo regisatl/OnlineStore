@@ -11,8 +11,8 @@
 
         <div class="container mx-auto mt-5">
             <div class="d-flex justify-content-between align-items-center card-title">
-                <span class="text-uppercase fw-semibold">Ajouter une catégorie</span>
-                <a href="{{ route('categories.index') }}" class="btn btn-light"><span>Retour</span></a>
+                <span class="text-uppercase fw-semibold">Ajouter un produit</span>
+                <a href="{{ route('products.index') }}" class="btn btn-light"><span>Retour</span></a>
             </div>
             <div class="col-12 grid-margin stretch-card mt-3">
                 <div class="card">
