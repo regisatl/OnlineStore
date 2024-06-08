@@ -25,7 +25,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('products.index')}}">
+            <a class="nav-link" href="{{ route('products.index') }}">
                 <i class="mdi mdi-tag menu-icon"></i>
                 <span class="menu-title">Produits</span>
             </a>
@@ -49,7 +49,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" data-bs-toggle="collapse" aria-expanded="false" aria-controls="auth">
                 <i class="menu-icon mdi mdi-spotlight"></i>
                 <span class="menu-title">Paramètres</span>
                 <i class="menu-arrow"></i>

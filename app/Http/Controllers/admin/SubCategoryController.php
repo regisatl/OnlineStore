@@ -26,6 +26,7 @@ class SubCategoryController extends Controller
       {
             $categories = Category::orderBy('name', 'asc')->get();
             $data['categories'] = $categories;
+            
             return view("admin.sub-category.create", $data);
       }
 

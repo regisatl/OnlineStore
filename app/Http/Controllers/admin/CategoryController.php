@@ -18,7 +18,6 @@ class CategoryController extends Controller
             }
 
             $categories = $categories->paginate(10);
-
             return view("admin.category.index", compact("categories"));
       }
 
