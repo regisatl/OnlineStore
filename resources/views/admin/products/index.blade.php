@@ -40,6 +40,10 @@
                                         <th>N°</th>
                                         <th>Titre</th>
                                         <th>Catégorie</th>
+                                        <th>Marque</th>
+                                        <th>Price</th>
+                                        <th>Code Bars</th>
+                                        <th>Quantité</th>
                                         <th>Slug</th>
                                         <th>Status</th>
                                         <th>Actions</th>
@@ -52,6 +56,10 @@
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $product->title }}</td>
                                                 <td>{{ $product->category->name }}</td>
+                                                <td>{{ $product->brand->name }}</td>
+                                                <td>{{ $product->price }}</td>
+                                                <td>{{ $product->barcode }}</td>
+                                                <td>{{ $product->qty }}</td>
                                                 <td class="text-decoration-underline fw-medium text-primary">
                                                     {{ $product->slug }}</i>
                                                 </td>
