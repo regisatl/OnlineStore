@@ -58,6 +58,7 @@
     <script src="{{ asset('admin_assets/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('admin_assets/js/todolist.js') }}"></script>
     <script src="{{ asset('admin_assets/js/file-upload.js') }}"></script>
+    {{-- <script src="{{ asset(admin_assets/js/Chart.roundedBarCharts.js) }}"></script> --}}
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="{{ asset('admin_assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
@@ -70,7 +71,6 @@
         });
     </script>
     @yield('customJS')
-    <!-- <script src="admin_assets/js/Chart.roundedBarCharts.js"></script> -->
     <!-- End custom js for this page-->
 </body>
 
