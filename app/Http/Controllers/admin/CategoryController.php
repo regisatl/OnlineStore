@@ -34,7 +34,7 @@ class CategoryController extends Controller
                   $request->validate([
                         'name' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:categories',
-                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                         'status' => 'required|boolean',
                   ]);
 
@@ -85,7 +85,7 @@ class CategoryController extends Controller
                   $request->validate([
                         'name' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:categories,slug,' . $categoryId,
-                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                         'status' => 'required|boolean',
                   ]);
 

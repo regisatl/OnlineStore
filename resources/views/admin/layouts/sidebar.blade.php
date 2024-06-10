@@ -31,19 +31,19 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
                 <i class="mdi mdi-truck menu-icon"></i>
                 <span class="menu-title">Shipping</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
                 <i class="menu-icon mdi mdi-shopping"></i>
                 <span class="menu-title">Commandes</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
                 <i class="mdi mdi-margin menu-icon"></i>
                 <span class="menu-title">Discount</span>
             </a>
@@ -69,7 +69,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="docs/documentation.html">
+            <a class="nav-link" href="#">
                 <i class="menu-icon mdi mdi-file-document"></i>
                 <span class="menu-title">Documentation</span>
             </a>

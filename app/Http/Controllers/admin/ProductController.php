@@ -46,7 +46,7 @@ class ProductController extends Controller
                         'title' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:products',
                         'description' => 'nullable|string',
-                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                         'price' => 'required|numeric',
                         'compare_price' => 'nullable|numeric',
                         'category_id' => 'required|integer',
@@ -105,7 +105,10 @@ class ProductController extends Controller
             }
             $categories = Category::orderBy('name', 'asc')->get();
             $brands = Brand::orderBy('name', 'asc')->get();
+            $subCategories = SubCategory::orderBy('name', 'asc')->get();
+
             $data['categories'] = $categories;
+            $data['subCategories'] = $subCategories;
             $data['brands'] = $brands;
             $data['product'] = $product;
             return view("admin.products.edit", $data);
@@ -119,7 +122,7 @@ class ProductController extends Controller
                         'title' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:products,slug,' . $productId,
                         'description' => 'nullable|string',
-                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                         'price' => 'required|numeric',
                         'compare_price' => 'nullable|numeric',
                         'category_id' => 'required|integer',

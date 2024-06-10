@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminLoginController extends Controller
 {
-    //
     public function index()
     {
         return view('admin.login');
