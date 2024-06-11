@@ -49,7 +49,7 @@
                                 </div>
                                 @if (!@empty($product->image))
                                 <div class="form-group">
-                                    <img src="{{ asset('images/produits/' . $product->image) }}" class="img-fluid" alt="image">
+                                    <img src="{{ asset('images/products/' . $product->image) }}" class="img-fluid" alt="image">
                                 </div>
                             @else
                                 <div class="form-group">
