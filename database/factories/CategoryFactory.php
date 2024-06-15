@@ -10,18 +10,20 @@ use Illuminate\Support\Str;
  */
 class CategoryFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
-    {
-        return [
-            "name" => $this->faker->name(),
-            "slug" => Str::slug($this->faker->name()),
-            "status" => rand(0, 1),
-        ];
+      /**
+       * Define the model's default state.
+       *
+       * @return array<string, mixed>
+       */
+      public function definition(): array
+      {
+            $name = $this->faker->word;
+            return [
+                  'name' => $name,
+                  'slug' => Str::slug($name),
+                  'image' => $this->faker->imageUrl(640, 480, 'cats', true, 'Faker'),
+                  'status' => $this->faker->randomElement([0, 1]),
+            ];
 
-    }
+      }
 }
