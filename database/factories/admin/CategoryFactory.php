@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\admin;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -17,13 +17,26 @@ class CategoryFactory extends Factory
        */
       public function definition(): array
       {
-            $name = $this->faker->word;
+            $categories = [
+                  'Vêtements',
+                  'Chaussures',
+                  'Accessoires',
+                  'Électronique',
+                  'Appareils ménagers',
+                  'Beauté',
+                  'Sport',
+                  'Jouets',
+                  'Meubles',
+                  'Livres',
+                  'Automobile'
+            ];
+            $name = $this->faker->randomElement($categories);
             return [
                   'name' => $name,
                   'slug' => Str::slug($name),
-                  'image' => $this->faker->imageUrl(640, 480, 'cats', true, 'Faker'),
+                  'image' => $this->faker->imageUrl(640, 480, 'category', true, $name),
                   'status' => $this->faker->randomElement([0, 1]),
             ];
-
       }
+
 }
