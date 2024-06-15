@@ -29,10 +29,10 @@ class DatabaseSeeder extends Seeder
             //       ProductSeeder::class,
             // ]);
 
-            // Brand::factory(30)->create();
-            // Category::factory(30)->create();
-            // SubCategory::factory(30)->create();
-            // Product::factory(30)->create();
+            // Brand::factory(15)->create();
+            // Category::factory(15)->create();
+            // SubCategory::factory(15)->create();
+            // Product::factory(15)->create();
 
 
       }

@@ -133,8 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
       });
 
-      if (document.querySelector("#datepicker-popup")) {
-            var datepickerPopup = document.querySelector("#datepicker-popup");
+      if (document.getElementById("#datepicker-popup")) {
+            var datepickerPopup = document.getElementById("#datepicker-popup");
             new Datepicker(datepickerPopup, {
                   enableOnReadonly: true,
                   todayHighlight: true,
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       document
-            .querySelector("#check-all")
+            .getElementById("#check-all")
             .addEventListener("click", function () {
                   document
                         .querySelectorAll(".form-check-input")
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
       document
-            .querySelector("#navbar-search-icon")
+            .getElementById("#navbar-search-icon")
             .addEventListener("click", function () {
                   document.querySelector("#navbar-search-input").focus();
             });
@@ -168,3 +168,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
       });
 });
+
+(function ($) {
+      "use strict";
+      $(function () {
+            if ($("#datepicker-popup").length) {
+                  $("#datepicker-popup").datepicker({
+                        enableOnReadonly: true,
+                        todayHighlight: true,
+                  });
+                  $("#datepicker-popup").datepicker("setDate", "0");
+            }
+      });
+})(jQuery);

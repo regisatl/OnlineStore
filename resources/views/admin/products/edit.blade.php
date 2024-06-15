@@ -42,20 +42,21 @@
                                         <input type="text" class="form-control file-upload-info" disabled
                                             placeholder="Insérer votre image...">
                                         <span class="input-group-append">
-                                            <button class="file-upload-browse btn btn-primary"
+                                            <button class="file-upload-browse btn btn-success"
                                                 type="button">Choisir</button>
                                         </span>
                                     </div>
                                 </div>
                                 @if (!@empty($product->image))
-                                <div class="form-group">
-                                    <img src="{{ asset('images/products/' . $product->image) }}" class="img-fluid" alt="image">
-                                </div>
-                            @else
-                                <div class="form-group">
-                                    Aucune image trouvée pour cette produits
-                                </div>
-                            @endif
+                                    <div class="form-group">
+                                        <img src="{{ asset('images/products/' . $product->image) }}" class="img-fluid"
+                                            alt="image">
+                                    </div>
+                                @else
+                                    <div class="form-group">
+                                        Aucune image trouvée pour cette produits
+                                    </div>
+                                @endif
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
@@ -163,7 +164,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="button-container d-flex align-items-center justify-content-between">
-                                    <button type="submit" class="btn btn-primary"
+                                    <button type="submit" class="btn btn-success"
                                         id="submitBtn"><span>Modifier</span></button>
                                     <button type="reset" class="btn btn-light"><span>Annuler</span></button>
                                 </div>
@@ -177,4 +178,21 @@
         <!-- main-panel ends -->
     </div>
     <!-- page-body-wrapper ends -->
+@endsection
+@section('customJS')
+    <script>
+        const nameInput = document.getElementById('title');
+        const slugInput = document.getElementById('slug');
+
+        nameInput.addEventListener('input', () => {
+            const nameValue = nameInput.value.trim();
+            const slugValue = nameValue.replace(/\s+/g, '-').toLowerCase();
+            slugInput.value = slugValue;
+        });
+
+        submitBtn.addEventListener('click', () => {
+            submitBtn.disabled = true;
+            submitBtn.classList.add('disabled');
+        });
+    </script>
 @endsection

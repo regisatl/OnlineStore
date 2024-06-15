@@ -39,12 +39,12 @@
                                     <tr>
                                         <th>N°</th>
                                         <th>Titre</th>
+                                        <th>Slug</th>
                                         <th>Catégorie</th>
                                         <th>Marque</th>
                                         <th>Price</th>
-                                        <th>Code Bars</th>
                                         <th>Quantité</th>
-                                        <th>Slug</th>
+                                        <th>Code Bars</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
@@ -55,14 +55,14 @@
                                             <tr>
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $product->title }}</td>
-                                                <td>{{ $product->category->name }}</td>
-                                                <td>{{ $product->brand->name }}</td>
-                                                <td>{{ $product->price }}</td>
-                                                <td>{{ $product->barcode }}</td>
-                                                <td>{{ $product->qty }}</td>
                                                 <td class="text-decoration-underline fw-medium text-primary">
                                                     {{ $product->slug }}</i>
                                                 </td>
+                                                <td>{{ $product->category->name }}</td>
+                                                <td>{{ $product->brand->name }}</td>
+                                                <td>{{ $product->price }}</td>
+                                                <td>{{ $product->qty }}</td>
+                                                <td>{{ $product->barcode }}</td>
                                                 <td title="Status">
                                                     @if ($product->status == 1)
                                                         <label title="Actif" class="text-success"><i
@@ -91,7 +91,7 @@
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="5">Aucun produit trouvé pour le moment...</td>
+                                            <td colspan="10">Aucun produit trouvé pour le moment...</td>
                                         </tr>
                                     @endif
                                 </tbody>

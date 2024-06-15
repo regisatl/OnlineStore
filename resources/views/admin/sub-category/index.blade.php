@@ -39,8 +39,8 @@
                                     <tr>
                                         <th>N°</th>
                                         <th>Nom</th>
-                                        <th>Catégories</th>
                                         <th>Slug</th>
+                                        <th>Catégories</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
@@ -51,10 +51,10 @@
                                             <tr>
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $subCategory->name }}</td>
-                                                <td>{{ $subCategory->category->name }}</td>
                                                 <td class="text-decoration-underline fw-medium text-primary">
                                                     {{ $subCategory->slug }}</i>
                                                 </td>
+                                                <td>{{ $subCategory->category->name }}</td>
                                                 <td title="Status">
                                                     @if ($subCategory->status == 1)
                                                         <label title="Actif" class="text-success"><i
@@ -83,7 +83,7 @@
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="5">Aucune sous catégorie trouvée pour le moment...</td>
+                                            <td colspan="6">Aucune sous catégorie trouvée pour le moment...</td>
                                         </tr>
                                     @endif
                                 </tbody>

@@ -34,7 +34,7 @@ class CategoryFactory extends Factory
             return [
                   'name' => $name,
                   'slug' => Str::slug($name),
-                  'image' => $this->faker->imageUrl(640, 480, 'category', true, $name),
+                  // 'image' => $this->faker->imageUrl(640, 480, 'category', true, $name),
                   'status' => $this->faker->randomElement([0, 1]),
             ];
       }

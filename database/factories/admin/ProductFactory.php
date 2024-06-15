@@ -149,7 +149,7 @@ class ProductFactory extends Factory
                   'title' => $product['title'],
                   'slug' => Str::slug($product['title']),
                   'description' => $this->faker->sentence(),
-                  'image' => $this->faker->imageUrl(640, 480, 'product', true, $product['title']),
+                   'image' => $this->faker->imageUrl(640, 480, 'product', true, $product['title']),
                   'price' => $product['price'],
                   'compare_price' => $product['compare_price'],
                   'category_id' => Category::where('name', $product['category'])->first()->id ?? Category::factory(),

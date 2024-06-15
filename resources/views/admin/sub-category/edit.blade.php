@@ -52,7 +52,7 @@
                                   </select>
                               </div>
                               <div class="button-container d-flex align-items-center justify-content-between">
-                                  <button type="submit" class="btn btn-success" id="submitBtn"><span>Ajouter</span></button>
+                                  <button type="submit" class="btn btn-success" id="submitBtn"><span>Modifier</span></button>
                                   <button type="reset" class="btn btn-light"><span>Annuler</span></button>
                               </div>
                           </form>
