@@ -26,7 +26,7 @@ class SubCategoryController extends Controller
       {
             $categories = Category::orderBy('name', 'asc')->get();
             $data['categories'] = $categories;
-            
+
             return view("admin.sub-category.create", $data);
       }
 
@@ -38,6 +38,7 @@ class SubCategoryController extends Controller
                         'name' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:sub_categories',
                         'status' => 'required|boolean',
+                        'show_home' => 'required|in:Yes,No',
                         'category_id' => 'required',
                   ]);
 
@@ -46,6 +47,7 @@ class SubCategoryController extends Controller
                   $subcategory->name = $request->input('name');
                   $subcategory->slug = $request->input('slug');
                   $subcategory->status = $request->input('status');
+                  $subcategory->show_home = $request->input('show_home');
                   $subcategory->category_id = $request->input('category_id');
 
                   // Sauvegarder la sous catégorie dans la base de données
@@ -80,6 +82,7 @@ class SubCategoryController extends Controller
                         'name' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:sub_categories,slug,' . $subCategoryId,
                         'status' => 'required|boolean',
+                        'show_home' => 'required|in:Yes,No',
                         'category_id' => 'required'
                   ]);
 
@@ -90,6 +93,7 @@ class SubCategoryController extends Controller
                   $subCategory->name = $request->input('name');
                   $subCategory->slug = $request->input('slug');
                   $subCategory->status = $request->input('status');
+                  $subCategory->show_home = $request->input('show_home');
                   $subCategory->category_id = $request->input('category_id');
 
                   // Sauvegarder la catégorie dans la base de données

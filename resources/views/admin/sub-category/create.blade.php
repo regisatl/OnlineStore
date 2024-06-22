@@ -23,7 +23,8 @@
                             <div class="form-group">
                                 <label for="category">Catégories</label>
                                 <select class="form-select text-black" name="category_id" id="category_id">
-                                    <option value="" class="text-black" selected disabled>Choisissez une catégories....</option>
+                                    <option value="" class="text-black" selected disabled>Choisissez une
+                                        catégories....</option>
                                     @if ($categories->isNotEmpty())
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}" class="text-black">{{ $category->name }}
@@ -47,6 +48,13 @@
                                 <select class="form-select text-black" name="status" id="status">
                                     <option value="1" class="text-black">Actif</option>
                                     <option value="0" class="text-black">Inactif</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="show_home">Afficher sur l'accueil</label>
+                                <select class="form-select text-black" name="show_home" id="show_home">
+                                    <option value="Yes" class="text-black">Oui</option>
+                                    <option value="No" class="text-black">Non</option>
                                 </select>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">

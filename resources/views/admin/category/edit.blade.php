@@ -60,6 +60,13 @@
                                         class="text-black">Inactif</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                              <label for="show_home">Afficher sur l'accueil</label>
+                              <select class="form-select text-black" name="show_home" id="show_home">
+                                  <option {{ $category->show_home == 'Yes' ? 'selected' : '' }} value="Yes" class="text-black">Oui</option>
+                                  <option {{ $category->show_home == 'No' ? 'selected' : '' }} value="No" class="text-black">Non</option>
+                              </select>
+                          </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
                                 <button type="submit" class="btn btn-success" id="submitBtn"><span>Modifier</span></button>
                                 <button type="reset" class="btn btn-light"><span>Annuler</span></button>

@@ -36,6 +36,7 @@ class CategoryController extends Controller
                         'slug' => 'required|string|max:255|unique:categories',
                         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                         'status' => 'required|boolean',
+                        'show_home' => 'required|in:Yes,No',
                   ]);
 
                   // Gestion du téléchargement de l'image
@@ -52,6 +53,7 @@ class CategoryController extends Controller
                   $category->slug = $request->input('slug');
                   $category->image = $imageName;
                   $category->status = $request->input('status');
+                  $category->show_home = $request->input('show_home');
 
                   // Sauvegarder la catégorie dans la base de données
                   $category->save();
@@ -87,6 +89,7 @@ class CategoryController extends Controller
                         'slug' => 'required|string|max:255|unique:categories,slug,' . $categoryId,
                         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
                         'status' => 'required|boolean',
+                        'show_home' => 'required|in:Yes,No',
                   ]);
 
                   // Trouver la catégorie
@@ -105,6 +108,7 @@ class CategoryController extends Controller
                   $category->slug = $request->input('slug');
                   $category->image = $imageName;
                   $category->status = $request->input('status');
+                  $category->show_home = $request->input('show_home');
 
                   // Sauvegarder la catégorie dans la base de données
                   $category->save();

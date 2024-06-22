@@ -42,6 +42,7 @@ class SubCategoryFactory extends Factory
                   'name' => $name,
                   'slug' => Str::slug($name),
                   'status' => $this->faker->randomElement([0, 1]),
+                  'show_home' => $this->faker->randomElement(['Yes', 'No']),
                   'category_id' => Category::factory(),
             ];
       }
