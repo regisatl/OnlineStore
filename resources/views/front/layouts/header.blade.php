@@ -44,25 +44,32 @@
                 <div class="menu-desktop">
                     <ul class="main-menu">
                         <li>
-                            <a href="">Accueil</a>
+                            <a href="#">Accueil</a>
+                        </li>
+                        <li class="active-menu">
+                            <a href="#">Catégories</a>
+                            <ul class="sub-menu">
+                                @if (getCategories()->isNotEmpty())
+                                    @foreach (getCategories() as $category)
+                                        <li><a href="">{{ $category->name }}</a></li>
+                                    @endforeach
+                                @endif
+                            </ul>
                         </li>
                         <li>
-                            <a href="">Shop</a>
+                            <a href="#">Shop</a>
                         </li>
                         <li class="label1" data-label1="hot">
-                            <a href="shoping-cart.html">Features</a>
+                            <a href="#">Features</a>
                         </li>
-
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="#">Blog</a>
                         </li>
-
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="#">About</a>
                         </li>
-
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="#">Contact</a>
                         </li>
                     </ul>
                 </div>

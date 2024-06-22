@@ -17,45 +17,51 @@
             <div class="col-12 grid-margin stretch-card mt-3">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" method="post" action="{{ route('subcategories.store') }}"
+                        <form class="forms-sample row" method="post" action="{{ route('subcategories.store') }}"
                             id="subcategoryForm" name="subcategoryForm" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group">
-                                <label for="category">Catégories</label>
-                                <select class="form-select text-black" name="category_id" id="category_id">
-                                    <option value="" class="text-black" selected disabled>Choisissez une
-                                        catégories....</option>
-                                    @if ($categories->isNotEmpty())
-                                        @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}" class="text-black">{{ $category->name }}
-                                            </option>
-                                        @endforeach
-                                    @endif
-                                </select>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="category">Catégories</label>
+                                    <select class="form-select text-black" name="category_id" id="category_id">
+                                        <option value="" class="text-black" selected disabled>Choisissez une
+                                            catégories....</option>
+                                        @if ($categories->isNotEmpty())
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}" class="text-black">{{ $category->name }}
+                                                </option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="name">Nom</label>
-                                <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="sous catégories" required>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="name">Nom</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        placeholder="sous catégories" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select class="form-select text-black" name="status" id="status">
+                                        <option value="1" class="text-black">Actif</option>
+                                        <option value="0" class="text-black">Inactif</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="slug">Slug</label>
-                                <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug"
-                                    required readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="status">Status</label>
-                                <select class="form-select text-black" name="status" id="status">
-                                    <option value="1" class="text-black">Actif</option>
-                                    <option value="0" class="text-black">Inactif</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="show_home">Afficher sur l'accueil</label>
-                                <select class="form-select text-black" name="show_home" id="show_home">
-                                    <option value="Yes" class="text-black">Oui</option>
-                                    <option value="No" class="text-black">Non</option>
-                                </select>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="slug">Slug</label>
+                                    <input type="text" class="form-control" name="slug" id="slug"
+                                        placeholder="Slug" required readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="show_home">Afficher sur l'accueil</label>
+                                    <select class="form-select text-black" name="show_home" id="show_home">
+                                        <option value="Yes" class="text-black">Oui</option>
+                                        <option value="No" class="text-black">Non</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="button-container d-flex align-items-center justify-content-between">
                                 <button type="submit" class="btn btn-primary" id="submitBtn"><span>Ajouter</span></button>

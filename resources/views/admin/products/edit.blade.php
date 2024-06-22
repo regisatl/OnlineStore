@@ -20,20 +20,40 @@
                             id="productForm" name="productForm" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="form-group">
                                     <label for="title">Titre</label>
                                     <input type="text" class="form-control" name="title" id="title"
                                         placeholder="Titre" value="{{ $product->title }}" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="slug">Slug</label>
-                                    <input type="text" class="form-control" name="slug" id="slug"
-                                        placeholder="Slug" value="{{ $product->slug }}" required readonly>
+                                    <label for="price">Prix</label>
+                                    <input type="number" step="0.01" class="form-control" name="price" id="price"
+                                        placeholder="Prix" value="{{ $product->price }}" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <textarea class="form-control" name="description" id="description" placeholder="Description">{{ $product->description }}</textarea>
+                                    <label for="brand_id">Marque</label>
+                                    <select class="form-select text-black" name="brand_id" id="brand_id">
+                                        <option value="" class="text-black" selected disabled>Choisissez une
+                                            marque....</option>
+                                        @if ($brands->isNotEmpty())
+                                            @foreach ($brands as $brand)
+                                                <option value="{{ $brand->id }}" class="text-black"
+                                                    {{ $product->brand_id == $brand->id ? 'selected' : '' }}>
+                                                    {{ $brand->name }}
+                                                </option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="track_qty">Suivre la quantité</label>
+                                    <select class="form-select text-black" name="track_qty" id="track_qty">
+                                        <option value="Yes" class="text-black"
+                                            {{ $product->track_qty == 'Yes' ? 'selected' : '' }}>Oui</option>
+                                        <option value="No" class="text-black"
+                                            {{ $product->track_qty == 'No' ? 'selected' : '' }}>Non</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Choisir une image</label>
@@ -58,11 +78,11 @@
                                     </div>
                                 @endif
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="form-group">
-                                    <label for="price">Prix</label>
-                                    <input type="number" step="0.01" class="form-control" name="price" id="price"
-                                        placeholder="Prix" value="{{ $product->price }}" required>
+                                    <label for="slug">Slug</label>
+                                    <input type="text" class="form-control" name="slug" id="slug"
+                                        placeholder="Slug" value="{{ $product->slug }}" required readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="compare_price">Prix de comparaison</label>
@@ -86,6 +106,31 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label for="sku">SKU</label>
+                                    <input type="text" class="form-control" name="sku" id="sku"
+                                        placeholder="SKU" value="{{ $product->sku }}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="is_featured">En vedette</label>
+                                    <select class="form-select text-black" name="is_featured" id="is_featured">
+                                        <option value="Yes" class="text-black"
+                                            {{ $product->is_featured == 'Yes' ? 'selected' : '' }}>Oui</option>
+                                        <option value="No" class="text-black"
+                                            {{ $product->is_featured == 'No' ? 'selected' : '' }}>Non</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <textarea class="form-control" name="description" id="description" placeholder="Description">{{ $product->description }}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="qty">Quantité</label>
+                                    <input type="number" class="form-control" name="qty" id="qty"
+                                        placeholder="Quantité" value="{{ $product->qty }}">
+                                </div>
+                                <div class="form-group">
                                     <label for="sub_category_id">Sous-catégorie</label>
                                     <select class="form-select text-black" name="sub_category_id" id="sub_category_id">
                                         <option value="" class="text-black" selected disabled>Choisissez une sous
@@ -100,65 +145,20 @@
                                         @endif
                                     </select>
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="brand_id">Marque</label>
-                                    <select class="form-select text-black" name="brand_id" id="brand_id">
-                                        <option value="" class="text-black" selected disabled>Choisissez une
-                                            marque....</option>
-                                        @if ($brands->isNotEmpty())
-                                            @foreach ($brands as $brand)
-                                                <option value="{{ $brand->id }}" class="text-black"
-                                                    {{ $product->brand_id == $brand->id ? 'selected' : '' }}>
-                                                    {{ $brand->name }}
-                                                </option>
-                                            @endforeach
-                                        @endif
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="is_featured">En vedette</label>
-                                    <select class="form-select text-black" name="is_featured" id="is_featured">
-                                        <option value="Yes" class="text-black"
-                                            {{ $product->is_featured == 'Yes' ? 'selected' : '' }}>Oui</option>
-                                        <option value="No" class="text-black"
-                                            {{ $product->is_featured == 'No' ? 'selected' : '' }}>Non</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="sku">SKU</label>
-                                    <input type="text" class="form-control" name="sku" id="sku"
-                                        placeholder="SKU" value="{{ $product->sku }}" required>
-                                </div>
                                 <div class="form-group">
                                     <label for="barcode">Code-barres</label>
                                     <input type="text" class="form-control" name="barcode" id="barcode"
                                         placeholder="Code-barres" value="{{ $product->barcode }}">
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="track_qty">Suivre la quantité</label>
-                                    <select class="form-select text-black" name="track_qty" id="track_qty">
-                                        <option value="Yes" class="text-black"
-                                            {{ $product->track_qty == 'Yes' ? 'selected' : '' }}>Oui</option>
-                                        <option value="No" class="text-black"
-                                            {{ $product->track_qty == 'No' ? 'selected' : '' }}>Non</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="qty">Quantité</label>
-                                    <input type="number" class="form-control" name="qty" id="qty"
-                                        placeholder="Quantité" value="{{ $product->qty }}">
-                                </div>
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                     <select class="form-select text-black" name="status" id="status">
                                         <option value="1" class="text-black"
-                                            {{ $product->status == 1 ? 'selected' : '' }}>Actif</option>
+                                            {{ $product->status == 1 ? 'selected' : '' }}>
+                                            Actif</option>
                                         <option value="0" class="text-black"
-                                            {{ $product->status == 0 ? 'selected' : '' }}>Inactif</option>
+                                            {{ $product->status == 0 ? 'selected' : '' }}>
+                                            Inactif</option>
                                     </select>
                                 </div>
                             </div>

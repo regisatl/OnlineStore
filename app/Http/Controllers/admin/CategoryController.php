@@ -88,8 +88,8 @@ class CategoryController extends Controller
                         'name' => 'required|string|max:255',
                         'slug' => 'required|string|max:255|unique:categories,slug,' . $categoryId,
                         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-                        'status' => 'required|boolean',
                         'show_home' => 'required|in:Yes,No',
+                        'status' => 'required|boolean',
                   ]);
 
                   // Trouver la catégorie
@@ -107,8 +107,8 @@ class CategoryController extends Controller
                   $category->name = $request->input('name');
                   $category->slug = $request->input('slug');
                   $category->image = $imageName;
-                  $category->status = $request->input('status');
                   $category->show_home = $request->input('show_home');
+                  $category->status = $request->input('status');
 
                   // Sauvegarder la catégorie dans la base de données
                   $category->save();
