@@ -6,20 +6,23 @@
         <div class="top-bar">
             <div class="content-topbar flex-sb-m h-full container">
                 <div class="left-top-bar">
-                    Free shipping for standard order over $100
+                    Livraison gratuite pour les commandes standard de plus de 100 $
                 </div>
 
                 <div class="right-top-bar flex-w h-full">
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        Help & FAQs
+                        Aide et FAQs
                     </a>
 
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        My Account
+                    <a href="{{ route('admin.login') }}" class="flex-c-m trans-04 p-lr-25">
+                        Connexion
                     </a>
 
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
                         EN
+                    </a>
+                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                        FR
                     </a>
 
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
@@ -33,26 +36,19 @@
             <nav class="limiter-menu-desktop container">
 
                 <!-- Logo desktop -->
-                <a href="#" class="logo">
-                    <img src="{{ asset('front_assets/images/icons/logo-01.png') }}"  alt="IMG-LOGO">
+                <a href="/" class="logo">
+                    ONLINE STORE
                 </a>
 
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
                     <ul class="main-menu">
-                        <li class="active-menu">
-                            <a href="index.html">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Homepage 1</a></li>
-                                <li><a href="home-02.html">Homepage 2</a></li>
-                                <li><a href="home-03.html">Homepage 3</a></li>
-                            </ul>
-                        </li>
-
                         <li>
-                            <a href="product.html">Shop</a>
+                            <a href="">Accueil</a>
                         </li>
-
+                        <li>
+                            <a href="">Shop</a>
+                        </li>
                         <li class="label1" data-label1="hot">
                             <a href="shoping-cart.html">Features</a>
                         </li>
@@ -96,7 +92,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <a href="index.html"><img src="{{ asset('front_assets/images/icons/logo-01.png') }}"  alt="IMG-LOGO"></a>
+            <a href="index.html"><img src="{{ asset('front_assets/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
         </div>
 
         <!-- Icon header -->

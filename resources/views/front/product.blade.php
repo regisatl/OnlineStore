@@ -261,7 +261,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-01.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-01.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -282,7 +282,7 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                      src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
@@ -296,7 +296,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-02.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-02.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -317,10 +317,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -331,7 +331,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-03.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-03.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -352,10 +352,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -366,7 +366,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-04.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-04.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -387,10 +387,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -401,7 +401,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-05.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-05.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -422,10 +422,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -436,7 +436,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-06.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-06.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -457,10 +457,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -471,7 +471,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-07.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-07.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -492,10 +492,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -506,7 +506,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-08.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-08.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -527,10 +527,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -541,7 +541,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-09.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-09.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -562,10 +562,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -576,7 +576,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="images/product-10.jpg" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-10.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -597,10 +597,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -611,7 +611,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-11.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-11.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -646,7 +646,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-12.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-12.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -667,10 +667,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -681,7 +681,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-13.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-13.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -702,10 +702,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -716,7 +716,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-14.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-14.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -737,10 +737,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -751,7 +751,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-15.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-15.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -772,10 +772,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -786,7 +786,7 @@
                  <!-- Block2 -->
                  <div class="block2">
                      <div class="block2-pic hov-img0">
-                         <img src="{{ asset('front_assets/images/product-16.jpg')}}" alt="IMG-PRODUCT">
+                         <img src="{{ asset('front_assets/images/product-16.jpg') }}" alt="IMG-PRODUCT">
 
                          <a href="#"
                              class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -807,10 +807,10 @@
 
                          <div class="block2-txt-child2 flex-r p-t-3">
                              <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png')}}"
+                                 <img class="icon-heart1 dis-block trans-04" src="{{ asset('front_assets/images/icons/icon-heart-01.png') }}"
                                      alt="ICON">
                                  <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png')}}" alt="ICON">
+                                     src="{{ asset('front_assets/images/icons/icon-heart-02.png') }}" alt="ICON">
                              </a>
                          </div>
                      </div>
@@ -821,7 +821,7 @@
          <!-- Load more -->
          <div class="flex-c-m flex-w w-full p-t-45">
              <a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-                 Load More
+                 Voir plus
              </a>
          </div>
      </div>
